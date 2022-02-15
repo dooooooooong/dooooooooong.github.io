@@ -7,14 +7,13 @@ date: 2021-06-12 23:49:12
 categories: CS/DataStructure
 use_math: true
 ---
-<br>
 
 ### **스택의 적용**
 
 스택은 arithmetic expression을 계산하는데 자주 활용됩니다. 그 중 대표적인 케이스들을 살펴봅시다.
+<br>
 
-
-
+<br>
 **Infix, Postfix, Prefix expression**
 
 - 중위 표기법 (Infix): 피연산자(숫자) 사이에 연산자(덧셈, 곱셈, 뺄셈, 나눗셈)가 있는 식  ex) **(A+B) \* C-D**
@@ -32,7 +31,6 @@ use_math: true
 
 
 **알고리즘**
-
 1. postfix 산술식을 문자열으로 저장합니다. 
 2. 문자를 하나씩 검사합니다.
    - 문자가 숫자(피연산자)인 경우: 스택에 저장합니다.
@@ -51,12 +49,6 @@ Postfix: 1 2 3 + /
 ![postfixtoinfix](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/postfixtoinfix.gif?raw=true)
 
 <br>
-
-<br>
-
-<br>
-
-
 
 
 
@@ -266,7 +258,6 @@ int main() {
 #### 2. Calculate Infix Expression
 
 중위표현식으로 입력을 받았을 때 계산하는 것도 스택을 활용한 풀이법이 존재합니다. 
-
 예를 들어 아래와 같은 식을 계산한다고 합시다.
 
 $ 2^2 + 10 / 5 - 1 $
@@ -278,20 +269,14 @@ $ 2^2 + 10 / 5 - 1 $
 
 
 **알고리즘**
-
 연산자 스택과 숫자 스택 2개를 사용합니다.
 
 
-
 1. infix 산술식을 문자열으로 저장합니다. 
-
 2. 문자를 하나씩 검사합니다.
    - 공백(whitespace): 무시합니다.
-   
    - 왼쪽 괄호 (`(`): 연산자 스택에 `push`합니다.
-   
    - 숫자: 여러 자리 숫자인지 아닌지 체크하고 숫자 스택에 `push`합니다.
-   
    - 오른쪽 괄호 (`)`)
      - 연산자 스택의 맨 위가 왼쪽 왼쪽 괄호 (`(`)가 될 때까지
        - 연산자 스택에서 연산자를 `pop()` 하여 가져옵니다.
@@ -299,8 +284,6 @@ $ 2^2 + 10 / 5 - 1 $
        - 연산자를 올바른 순서로 숫자에 적용합니다.
        - 결과값을 숫자 스택에  `push`합니다. 
      - 연산자 스택에서 왼쪽 괄호를 `pop`합니다.
-   
-     
    
    - 연산자 (`+ - * / ^`)
      - 연산자 스택이 비어있지 않고 연산자 스택의 맨 위의 항목이 **현재 연산자**보다 더 높거나 같은 우선순위를 가지면
@@ -312,18 +295,14 @@ $ 2^2 + 10 / 5 - 1 $
        
        
      - 연산자 스택이 비어있거나 스택의 맨 위 항목이 현재 연산자보다 우선순위가 낮으면
-     
        - **현재 연산자**를 연산자 스택에 `push`합니다.
-
-<br>
-
+   
 3. 연산자 스택이 비워질 때 까지
    1. 연산자 스택에서 연산자를 `pop()` 하여 가져옵니다.
    2. 숫자 스택에서 2개를 `pop()`하여 가져옵니다. 
    3. 연산자를 올바른 순서로 숫자에 적용합니다.
    4. 결과값을 숫자 스택에  `push`합니다. 
 
-<br>
 4. 숫자 스택의 맨 위 요소를 반환합니다. (이 시점에서 연산자 스택은 비어있어야하고 숫자 스택에는 단 1개의 값만 저장되어 있어야합니다. )
 
 
@@ -331,20 +310,30 @@ $ 2^2 + 10 / 5 - 1 $
 
 
 **예시**
-
 ```
 infix: 2 * ((3 - 7) + 46 )
 ```
 
 
 
-
-
-
-
-
-
-
+![infixcal1](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal1.jpg)
+![infixcal2](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal2.jpg)
+![infixcal3](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal3.jpg)
+![infixcal4](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal4.jpg)
+![infixcal5](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal5.jpg)
+![infixcal6](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal6.jpg)
+![infixcal7](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal7.jpg)
+![infixcal8](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal8.jpg)
+![infixcal9](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal9.jpg)
+![infixcal10](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal10.jpg)
+![infixcal11](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal11.jpg)
+![infixcal12](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal12.jpg)
+![infixcal13](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal13.jpg)
+![infixcal14](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal14.jpg)
+![infixcal15](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal15.jpg)
+![infixcal16](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal16.jpg)
+![infixcal17](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal17-16448914565481.jpg)
+![infixcal18](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal18-16448914794402.jpg)
 
 
 
