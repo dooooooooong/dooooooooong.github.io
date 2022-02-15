@@ -1,3 +1,14 @@
+---
+layout: post
+class: post-template
+navigation: true
+title: "4-1. Stack Application"
+date: 2021-06-12 23:49:12
+categories: CS/DataStructure
+use_math: true
+---
+<br>
+
 ### **스택의 적용**
 
 스택은 arithmetic expression을 계산하는데 자주 활용됩니다. 그 중 대표적인 케이스들을 살펴봅시다.
@@ -37,7 +48,7 @@ Postfix: 1 2 3 + /
 
 
 
-![postfixtoinfix](../../../assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/postfixtoinfix.gif)
+![postfixtoinfix](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/postfixtoinfix.gif?raw=true)
 
 <br>
 
@@ -55,7 +66,7 @@ Postfix: a b c - d + / e a - * c *
 
 
 
-![postfixtoinfixexample](../../../assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/postfixtoinfixexample.gif)
+![postfixtoinfixexample](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/postfixtoinfixexample.gif?raw=true)
 
 
 
@@ -275,45 +286,298 @@ $ 2^2 + 10 / 5 - 1 $
 1. infix 산술식을 문자열으로 저장합니다. 
 
 2. 문자를 하나씩 검사합니다.
-
    - 공백(whitespace): 무시합니다.
-
+   
    - 왼쪽 괄호 (`(`): 연산자 스택에 `push`합니다.
-
+   
    - 숫자: 여러 자리 숫자인지 아닌지 체크하고 숫자 스택에 `push`합니다.
-
+   
    - 오른쪽 괄호 (`)`)
-
      - 연산자 스택의 맨 위가 왼쪽 왼쪽 괄호 (`(`)가 될 때까지
        - 연산자 스택에서 연산자를 `pop()` 하여 가져옵니다.
        - 숫자 스택에서 2개를 `pop()`하여 가져옵니다. 
        - 연산자를 올바른 순서로 숫자에 적용합니다.
        - 결과값을 숫자 스택에  `push`합니다. 
      - 연산자 스택에서 왼쪽 괄호를 `pop`합니다.
-
+   
      
-
+   
    - 연산자 (`+ - * / ^`)
-
-     - 연산자 스택이 비워지고 연산자 스택의 맨 위의 항목이 **현재 연산자**보다 더 높거나 같은 우선순위를 가질 때까지
+     - 연산자 스택이 비어있지 않고 연산자 스택의 맨 위의 항목이 **현재 연산자**보다 더 높거나 같은 우선순위를 가지면
        - 연산자 스택에서 연산자를 `pop()` 하여 가져옵니다.
        - 숫자 스택에서 2개를 `pop()`하여 가져옵니다. 
        - 연산자를 올바른 순서로 숫자에 적용합니다.
        - 결과값을 숫자 스택에  `push`합니다. 
-     - **현재 연산자**를 연산자 스택에 `push`합니다.
+       
+       
+       
+     - 연산자 스택이 비어있거나 스택의 맨 위 항목이 현재 연산자보다 우선순위가 낮으면
+     
+       - **현재 연산자**를 연산자 스택에 `push`합니다.
 
-
+<br>
 
 3. 연산자 스택이 비워질 때 까지
-
    1. 연산자 스택에서 연산자를 `pop()` 하여 가져옵니다.
    2. 숫자 스택에서 2개를 `pop()`하여 가져옵니다. 
    3. 연산자를 올바른 순서로 숫자에 적용합니다.
    4. 결과값을 숫자 스택에  `push`합니다. 
 
-   
-
+<br>
 4. 숫자 스택의 맨 위 요소를 반환합니다. (이 시점에서 연산자 스택은 비어있어야하고 숫자 스택에는 단 1개의 값만 저장되어 있어야합니다. )
+
+
+
+
+
+**예시**
+
+```
+infix: 2 * ((3 - 7) + 46 )
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+**코드**
+
+```c++
+// infix.cpp
+
+#include <iostream>
+#include <cassert>
+#include <cmath>
+using namespace std;
+
+#ifdef DEBUG
+#define DPRINT(func) func;
+#else
+#define DPRINT(func) ;
+#endif
+
+#if 0    //////////////////////////////////////////////////////////////////////
+// set #if 1, if you want to use this stack using vector instead of STL stack.
+// a basic stack functinality only provided for pedagogical purpose only.
+#include <vector>
+template <typename T>
+struct stack {
+	vector<T> item;
+
+	bool empty() const {
+		return item.empty();
+	}
+	auto size() const {
+		return item.size();
+	}
+	void push(T const& data) {
+		item.push_back(data);
+	}
+	void pop() {
+		if (item.empty())
+			throw out_of_range("stack<>::pop(): pop stack");
+		item.pop_back();
+	}
+	T top() const {
+		if (item.empty())
+			throw out_of_range("stack<>::top(): top stack");
+		return item.back();
+	}
+};
+#else  /////////////////////////// using STL stack //////////////////////////
+#include <stack>
+#endif ///////////////////////////////////////////////////////////////////////
+
+template <typename T>
+void printStack(stack<T> orig) {
+    stack<T> temp = orig;
+
+	if (temp.empty()) return;
+    
+	T top = temp.top();
+	temp.pop();
+	printStack(temp);
+	cout << top << " ";
+}
+
+// 연산자 우선순위
+int precedence(char op) {
+	if (op == '(') return 0;
+	if (op == '+' || op == '-') return 1;
+	if (op == '*' || op == '/') return 2;
+	if (op == '^') return 3;
+	return 4;
+}
+
+// performs arithmetic operations.
+double apply_op(double a, double b, char op) {
+	switch (op) {
+	case '+': return a + b;
+	case '-': return a - b;
+	case '*': return a * b;
+	case '/': return a / b;
+	case '^': return pow(a, b);
+	}
+	cout << "Unsupported operator encountered: " << op << endl;
+	return 0;
+}
+
+
+double compute(stack<double>& va_stack, stack<char>& op_stack) {
+	double right  = va_stack.top(); va_stack.pop();     
+	double left = va_stack.top(); va_stack.pop();
+	char op = op_stack.top(); op_stack.pop();
+	double value = apply_op(left, right, op);
+
+	DPRINT(cout << " va/op_stack.pop: " << value << endl;);
+	return value;
+}
+
+// returns value of expression after evaluation.
+double evaluate(string tokens) {
+	DPRINT(cout << ">evaluate: tokens=" << tokens << endl;);
+	stack<double>  va_stack;              // stack to store operands or values
+	stack<char> op_stack;                 // stack to store operators.
+	double value = 0;
+
+	for (size_t i = 0; i < tokens.length(); i++) {
+		// token is a whitespace or an opening brace, skip it.
+		if (isspace(tokens[i])) continue;
+		DPRINT(cout << " tokens[" << i << "]=" << tokens[i] << endl;);
+
+		// current token is a value(or operand), push it to va_stack.
+		if (isdigit(tokens[i])) {
+			int ivalue = 0;
+			string num;
+			int index = 0;
+
+			while (isdigit(tokens[i + index])) {
+				num.push_back(tokens[i+index]);
+				index++;
+			}
+
+			ivalue = stoi(num);
+			va_stack.push(ivalue);
+			i += index-1;
+		} 
+
+		else if (tokens[i] == '(') op_stack.push(tokens[i]);
+
+		else if (tokens[i] == ')') { // compute it, push the result to va_stack
+			while (op_stack.top() != '(' && !op_stack.empty()) {
+				va_stack.push(compute(va_stack, op_stack));
+			}
+
+			// pop opening brace.
+            if(!op_stack.empty())
+               op_stack.pop();
+		}
+
+		else {     // 연산자 우선순위 따져줄 때
+            while(!op_stack.empty() && precedence(op_stack.top()) >= precedence(tokens[i])){
+                va_stack.push(compute(va_stack, op_stack));
+            }
+             
+            op_stack.push(tokens[i]);
+		}
+		DPRINT(cout << "va_stack: "; printStack(va_stack);  cout << endl;);
+		DPRINT(cout << "op_stack: "; printStack(op_stack);  cout << endl;);
+	}
+
+	DPRINT(cout << "tokens exhausted: now, check two stacks:" << endl;);
+	DPRINT(printStack(va_stack);  cout << endl;);
+	DPRINT(printStack(op_stack);  cout << endl;);
+
+	while (!op_stack.empty()) {
+		va_stack.push(compute(va_stack, op_stack));
+	}
+	
+	assert(va_stack.size() == 1);
+	assert(op_stack.empty());
+
+	value = va_stack.top();
+	va_stack.pop();
+
+	return value;
+}
+```
+
+
+
+```c++
+// driver.cpp
+// compile : g++ infix.cpp driver.cpp -o infix
+// run : ./infix
+
+#include <iostream>
+#include <string>
+using namespace std;
+
+#ifdef DEBUG
+#define DPRINT(func) func;
+#else
+#define DPRINT(func) ;
+#endif
+
+double evaluate(string tokens);
+
+int main() {
+	setvbuf(stdout, nullptr, _IONBF, 0);  // prevents the output from buffered on console.
+#if 1
+	string expr;
+	while (true) {
+		cout << "\nEnter an infix expr. w/ or w/o spaces." << endl;
+		cout << "e.g.: 2 *(34-4), 12/6 + 3, (123 - 3)/20*2 (q to quit): ";
+
+		getline(cin, expr);
+		if (expr[0] == 'q') break;
+		cout << expr << " = " << evaluate(expr) << endl;
+	};
+#endif
+
+#if 1
+	double value;
+	cout << "\nStep 1: Simple cases[-1, 13, 44]" << endl;
+	string infix1[] = { "1 + 2 - 4", "3 + 4*5/2", "(1 + 2^ 3 )*5-1" };
+	for (auto expr : infix1) {
+		value = evaluate(expr);
+		cout << " infix: " << expr << endl;
+		cout << "output: " << value << endl;
+	}
+
+	cout << "\nStep 2: Multi-digits operand[60, 15, 120]" << endl;
+	string infix2[] = { "(12 - 8) * 45/3", "1+2 * (3*4 - 5)", "(1+23)*5"};
+	for (auto expr : infix2) {
+		value = evaluate(expr);
+		cout << " infix: " << expr << endl;
+		cout << "output: " << value << endl;
+	}
+
+	cout << "\nStep 3: Final Testing[84, 409.5]" << endl;
+	string infix4[] = { "2 * ((3 - 7 ) + 46)  ", "12 + 4*100 - 5/ 2" };
+	for (auto expr : infix4) {
+		value = evaluate(expr);
+		cout << " infix: " << expr << endl;
+		cout << "output: " << value << endl;
+	}
+#endif
+	return EXIT_SUCCESS;
+}
+```
+
+
+
+
+
+
 
 
 
@@ -321,7 +585,7 @@ $ 2^2 + 10 / 5 - 1 $
 
 #### 3. Infix to Postfix
 
-![image-20211103111313224](../../../assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixtable.png)
+![image-20211103111313224](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixtable.png?raw=true)
 
 <br>
 
@@ -343,7 +607,7 @@ $ 2^2 + 10 / 5 - 1 $
 infix: a – (b + c * d) / e
 ```
 
-![image-20211103143943779](../../../assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixexample-16428454164411.png) 
+![image-20211103143943779](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixexample-16428454164411.png?raw=true) 
 
 
 

@@ -81,7 +81,7 @@ function sum(list, n) {
 
 - 각 실행문 별로 Step수와 실행 횟수를 분석한다.
 
-  ![01](../../../assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/01-16428297902761.png)
+  ![01](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/01-16428297902761.png?raw=true)
 
 
 
@@ -135,7 +135,7 @@ $ O(g(n)) = f(n) $: There exist postivie constants $c$ and $n_0$ such that $ 0 \
 
 
 
-![o_notation](../../../assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/o_notation.png)
+![o_notation](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/o_notation.png?raw=true)
 
 $n_0$보다 큰 모든 $n$값에 대해 함수값 $f(n)$은 함수 $c*g(n)$보다 작거나 같다는 의미이다. 
 
@@ -150,7 +150,7 @@ $ T(n) = 5n^3 + 3n^2 + 2n + 1 = O(n^3) $
 위 예시들과 같이 $ T(n) $ 으로 표현한 함수의 **최고차항의 차수**가 빅오가 된다.
 빅오의 순서는 아래와 같고 커질수록 좋지 않다. 보통 O(n<sup>2</sup>)이상의 복잡도를 가지는 알고리즘은 좋지 않다.
 
-<img src="../../../assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/03.png" alt="03" style="zoom:50%;" />
+<img src="https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/03.png?raw=true" alt="03" style="zoom:50%;" />
 
 $ O(1) < O(logn) < O(n) < O(nlogn) < O(n^2) < O(n^3) < O(2^n) < O(n!) $
 
@@ -171,7 +171,7 @@ $ \Omega (g(n)) = f(n) $ : there exist positive constants $c$ and $n_0$ such tha
   
 
 
-![omega_notation](../../../assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/omega_notation.png)
+![omega_notation](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/omega_notation.png?raw=true)
 
 $n_0$보다 큰 모든 $n$값에 대해 함수값 $f(n)$은 함수값 $c*g(n)$보다 크거나 같다는 의미이다.
 
@@ -199,7 +199,7 @@ $ \theta (g(n)) = f(n) $ : there exist positive constants $c_1,\ c_2$ and $n_0$ 
 
   
 
-  ![theta_notation](../../../assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/theta_notation.png)
+  ![theta_notation](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-10-complexity/theta_notation.png?raw=true)
 
 $n_0$보다 큰 모든 $n$값에 대해 함수값 $f(n)$은 함수값 $c_1*g(n)$보다 크거나 같거나 $c_2*g(n)$보다 작거나 같다는 의미이다.
 

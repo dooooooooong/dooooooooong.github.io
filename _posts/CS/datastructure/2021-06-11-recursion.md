@@ -182,7 +182,7 @@ $= 37 $
 
 #### Example
 
-![array](../../../assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/array.png)
+![array](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/array.png?raw=true)
 
 
 
@@ -233,7 +233,7 @@ int binarySearch(int list[], int target, int left, int right) {
 
 세 개의 축과 $n$개의 원반이 주어지는데 각각의 원반은 크기가 다릅니다. 축을 A, B, C라고 부르기로 하고 원반은 가장 작은 원반을 1로, 가장 큰 원반을 $n$이라고 번호를 매긴다고 합시다. 처음에는 모든 $n$개의 원반이 크기 순서대로 위에서 아래로, 즉 1이 가장 위에, 그리고 $n$이 가장 아래인 상태로 축 A에 놓여 있습니다. 원반이 5개인 하노이 탑은 다음과 같습니다.
 
-![hanoi](../../../assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/hanoi.png)
+![hanoi](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/hanoi.png?raw=true)
 
 
 
@@ -241,7 +241,7 @@ int binarySearch(int list[], int target, int left, int right) {
 
 
 
-![hanoi2](../../../assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/hanoi2.png)
+![hanoi2](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/hanoi2.png?raw=true)
 
 
 
@@ -266,7 +266,7 @@ i. 크기가 1부터 n-1인 디스크들을 A에서 C로 이동시킵니다.<br>
 
 ii. 가장 큰 디스크를 A에서 C로 이동시킵니다.<br>iii. 옮겨놨던 나머지 디스크들 (크기가 1부터 n-1인 디스크들)을 B에서 C으로 이동시킵니다.<br>
 
-![hanoi3](../../../assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/hanoi3.png)
+![hanoi3](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-11-recursion/hanoi3.png?raw=true)
 
 <br>
 
