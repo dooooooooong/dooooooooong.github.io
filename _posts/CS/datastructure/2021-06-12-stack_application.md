@@ -316,24 +316,24 @@ infix: 2 * ((3 - 7) + 46 )
 
 
 
-![infixcal1](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal1.jpg)
-![infixcal2](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal2.jpg)
-![infixcal3](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal3.jpg)
-![infixcal4](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal4.jpg)
-![infixcal5](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal5.jpg)
-![infixcal6](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal6.jpg)
-![infixcal7](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal7.jpg)
-![infixcal8](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal8.jpg)
-![infixcal9](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal9.jpg)
-![infixcal10](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal10.jpg)
-![infixcal11](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal11.jpg)
-![infixcal12](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal12.jpg)
-![infixcal13](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal13.jpg)
-![infixcal14](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal14.jpg)
-![infixcal15](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal15.jpg)
-![infixcal16](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal16.jpg)
-![infixcal17](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal17-16448914565481.jpg)
-![infixcal18](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal18-16448914794402.jpg)
+![infixcal1](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal1.jpg?raw=true)
+![infixcal2](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal2.jpg?raw=true)
+![infixcal3](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal3.jpg?raw=true)
+![infixcal4](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal4.jpg?raw=true)
+![infixcal5](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal5.jpg?raw=true)
+![infixcal6](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal6.jpg?raw=true)
+![infixcal7](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal7.jpg?raw=true)
+![infixcal8](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal8.jpg?raw=true)
+![infixcal9](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal9.jpg?raw=true)
+![infixcal10](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal10.jpg?raw=true)
+![infixcal11](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal11.jpg?raw=true)
+![infixcal12](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal12.jpg?raw=true)
+![infixcal13](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal13.jpg?raw=true)
+![infixcal14](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal14.jpg?raw=true)
+![infixcal15](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal15.jpg?raw=true)
+![infixcal16](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal16.jpg?raw=true)
+![infixcal17](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal17-16448914565481.jpg?raw=true)
+![infixcal18](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal18-16448914794402.jpg?raw=true)
 
 
 
@@ -574,7 +574,7 @@ int main() {
 
 #### 3. Infix to Postfix
 
-![image-20211103111313224](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixtable.png?raw=true)
+![image-20211103111313224](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixtable.png?raw=true?raw=true)
 
 <br>
 
@@ -596,7 +596,7 @@ int main() {
 infix: a – (b + c * d) / e
 ```
 
-![image-20211103143943779](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixexample-16428454164411.png?raw=true) 
+![image-20211103143943779](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixexample-16428454164411.png?raw=true?raw=true) 
 
 
 
