@@ -8,14 +8,11 @@ categories: CS/DataStructure
 use_math: true
 ---
 
-### **스택의 적용**
-
 스택은 arithmetic expression을 계산하는데 자주 활용됩니다. 그 중 대표적인 케이스들을 살펴봅시다.
 <br>
 
 <br>
 **Infix, Postfix, Prefix expression**
-
 - 중위 표기법 (Infix): 피연산자(숫자) 사이에 연산자(덧셈, 곱셈, 뺄셈, 나눗셈)가 있는 식  ex) **(A+B) \* C-D**
 - 전위 표기법 (Prefix): 연산자가 피연산자 앞에 나오는 방식. ex) **- * + A B C**
 - 후위 표기법 (Postfix): 연산자가 뒤에 오는 수식 ex) **A B + C * D -**
@@ -23,13 +20,14 @@ use_math: true
 
 
 
-
+<br>
+<br>
 #### 1. Postfix to Fully parenthesized Infix
 
 후위 표기법으로 서술된 산술식을 우리가 알기 편한 중위 표현식으로 바꿔주는 작업입니다. 스택을 이용하여 효율적으로 구성할 수 있습니다. 
 
 
-
+<br>
 **알고리즘**
 1. postfix 산술식을 문자열으로 저장합니다. 
 2. 문자를 하나씩 검사합니다.
@@ -37,9 +35,8 @@ use_math: true
    - 문자가 연산기호(연산자)인 경우: 스택에서 두개의 숫자를 꺼내고 연산자를 적용합니다.
 
 
-
+<br>
 **예시**
-
 ```
 Postfix: 1 2 3 + /
 ```
@@ -65,9 +62,8 @@ Postfix: a b c - d + / e a - * c *
 
 
 
-
+<br>
 **코드**
-
 ```c++
 // postfix.cpp
 
@@ -308,7 +304,7 @@ $ 2^2 + 10 / 5 - 1 $
 
 
 
-
+<br>
 **예시**
 ```
 infix: 2 * ((3 - 7) + 46 )
@@ -336,9 +332,8 @@ infix: 2 * ((3 - 7) + 46 )
 ![infixcal18](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixcal18-16448914794402.jpg?raw=true)
 
 
-
+<br>
 **코드**
-
 ```c++
 // infix.cpp
 
@@ -566,11 +561,9 @@ int main() {
 
 
 
+<br>
 
-
-
-
-
+<br>
 
 #### 3. Infix to Postfix
 
@@ -599,9 +592,8 @@ infix: a – (b + c * d) / e
 ![image-20211103143943779](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-12-stack_application/infixtopostfixexample-16428454164411.png?raw=true?raw=true) 
 
 
-
+<br>
 **code**
-
 ```c++
 #include <iostream>
 #include <stack>
