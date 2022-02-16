@@ -14,7 +14,6 @@ use_math: true
 <br>
 
 #### 구조체 정의
-
 ```c++
 // linkedlist.h
 struct Node {
@@ -38,9 +37,8 @@ using pNode = Node*;
 
 
 
-
+<br>
 #### 기본 메소드
-
 ```c++
 pNode clear(pNode p);	// free linked nodes and returns nullptr
 pNode last(pNode p);	// returns the last node
@@ -52,9 +50,7 @@ void minmax(pNode p, int& min, int& max); // sets min, max of the list
 
 
 ##### clear (pNode p)
-
 연결리스트를 삭제합니다.
-
 ```c++
 pNode clear(pNode p) {
 	if (empty(p)) return nullptr;
@@ -70,11 +66,9 @@ pNode clear(pNode p) {
 ```
 
 
-
+<br>
 ##### int size(pNode p)
-
 연결리스트의 크기를 반환합니다.
-
 ```c++
 int size(pNode p) {
 	if (empty(p)) return 0;
@@ -84,12 +78,10 @@ int size(pNode p) {
 }
 ```
 
-
+<br>
 
 ##### void minmax(pNode p, int& min, int& max)
-
 연결리스트의 노드의 키값중 최댓값과 최소값을 reference로 반환합니다.
-
 ```c++
 void minmax(pNode p, int& min, int& max) {
 	if (empty(p)) {
@@ -110,12 +102,10 @@ void minmax(pNode p, int& min, int& max) {
 }
 ```
 
-
+<br>
 
 ##### pNode last(pNode p)
-
 연결리스트의 마지막 노드를 반환합니다.
-
 ```c++
 pNode last(pNode p) {
 	if (empty(p)) return nullptr;
@@ -125,11 +115,9 @@ pNode last(pNode p) {
 ```
 
 
-
+<br>
 ##### empty(pNode p)
-
 연결리스트가 비어있는지 확인합니다.
-
 ```c++
 bool empty(pNode p) {
 	return p == nullptr;
@@ -139,9 +127,8 @@ bool empty(pNode p) {
 
 
 
-
+<br><br>
 #### 추가 메소드
-
 ```c++
 pNode push_front(pNode p, int x);	// pushes a new node at the front
 pNode push_back(pNode p, int x);	// pushes a new node at the back
@@ -152,11 +139,9 @@ pNode insertion_sort(pNode p);      // sorts and returns a new singly linked lis
 ```
 
 
-
+<br>
 ##### pNode push_front(pNode p, int x)
-
 key값이 x인 노드를 연결리스트 맨 처음부분에 추가합니다.
-
 ```c++
 pNode push_front(pNode p, int val) {
 	if (empty(p)) return new Node{ val };
@@ -165,11 +150,9 @@ pNode push_front(pNode p, int val) {
 ```
 
 
-
+<br>
 ##### pNode push_back(pNode p, int x)
-
 key값이 x인 노드를 연결리스트 마지막 부분에 추가합니다.
-
 ```c++
 pNode push_back(pNode p, int val) {
     
@@ -187,13 +170,10 @@ pNode push_back(pNode p, int val) {
 ```
 
 
-
+<br>
 ##### pNode push(pNode p, int val, int x)
-
 key값이 x인 기존 노드 앞에 key값이 val인 새로운 노드를 추가합니다.
-
 만약 key값이 x인 기존 노드가 없다면 리스트의 마지막에 추가합니다.
-
 ```c++
 pNode push(pNode p, int val, int x) {
 	if (empty(p)) return push_front(p, val);
@@ -222,13 +202,10 @@ pNode push(pNode p, int val, int x) {
 
 
 
-
+<br>
 ##### pNode push_N(pNode p, int N, pNode (*push_fp)(pNode, int))
-
 key값이 0 ~ (리스트의 크기+N)의 범위를 갖는 노드를 N개 생성하여 맨 앞 / 맨 뒤에 삽입합니다.
-
 추가 위치는 함수포인터로 설정할 수 있습니다.
-
 ```c++
 pNode push_N(pNode p, int N, pNode (*push_fp)(pNode, int)) {
 	int range = N + size(p);
@@ -242,13 +219,10 @@ pNode push_N(pNode p, int N, pNode (*push_fp)(pNode, int)) {
 ```
 
 
-
+<br>
 ##### pNode push_sorted(pNode p, int val)
-
 정렬된 순서로 노드를 추가합니다.
-
 노드가 5-6-2-4-7-10-3 이라면 새 노드 8을 추가한다면 새 노드의 위치는 7과 10의 사이가 됩니다.
-
 5-6-2-4-7-<span style="color:red">8</span>-10-3
 
 ```c++
@@ -286,11 +260,9 @@ pNode push_sorted(pNode p, int val) {
 
 
 
-
+<br>
 ##### pNode insertion_sort(pNode p)
-
 리스트를 오름차순으로 정렬합니다.
-
 ```c++
 pNode insertion_sort(pNode p) {
 	if (empty(p)) return nullptr;
@@ -311,9 +283,8 @@ pNode insertion_sort(pNode p) {
 
 
 
-
+<br><br>
 #### 삭제 메소드
-
 ```c++
 pNode pop_front(pNode p);			// pops the first node in the list
 pNode pop_back(pNode p);			// pops the last node in the list
@@ -322,11 +293,9 @@ pNode pop_N(pNode p, int N, pNode (*pop_fp)(pNode));  // pops N nodes
 ```
 
 
-
+<br>
 ##### pNode pop_front(pNode p)
-
 연결리스트의 첫 노드를 삭제합니다.
-
 ```c++
 pNode pop_front(pNode p) {
 	if (size(p) < 2) return nullptr;
@@ -340,11 +309,9 @@ pNode pop_front(pNode p) {
 ```
 
 
-
+<br>
 ##### pNode pop_back(pNode p)
-
 연결리스트의 마지막 노드를 삭제합니다.
-
 ```c++
 pNode pop_back(pNode p) {
 	if (size(p) < 2) return nullptr;
@@ -365,11 +332,9 @@ pNode pop_back(pNode p) {
 ```
 
 
-
+<br>
 ##### pNode pop(pNode p, int val)
-
 key값이 val인 노드를 찾아 삭제합니다.
-
 ```c++
 pNode pop(pNode p, int val) {
 	if (empty(p)) return nullptr;    // nothing to delete
@@ -398,13 +363,10 @@ pNode pop(pNode p, int val) {
 
 
 
-
+<br>
 ##### pNode pop_N(pNode p, int N, pNode (*pop_fp)(pNode))
-
 N개의 노드를 연결리스트의 최전방 / 최후방으로부터 삭제합니다.
-
 앞/뒤의 선택은 함수포인터를 이용합니다.
-
 ```c++
 pNode pop_N(pNode p, int N, pNode (*pop_fp)(pNode)) {
 	if (size(p) <= N) return nullptr;
@@ -421,9 +383,8 @@ pNode pop_N(pNode p, int N, pNode (*pop_fp)(pNode)) {
 
 
 
-
+<br><br>
 #### 고급 기능
-
 ```c++
 pair<pNode, pNode> cut_in_two_halves(pNode p); // cut the list in two halves
 pNode reverse_using_stack(pNode p); // reverses list using stack
@@ -432,13 +393,10 @@ pNode zap_duplicates(pNode p);      // zap duplicates
 ```
 
 
-
+<br>
 ##### pair<pNode, pNode> cut_in_two_halves(pNode p)
-
 연결리스트를 반으로 잘라서 두개의 연결리스트를 반환합니다.
-
 연결리스트의 크기가 홀수라면 두번째 연결리스트의 크기가 1 크게 반환합니다. Ex) 1-2 / 3-4-5
-
 ```c++
 pair<pNode, pNode> cut_in_two_halves(pNode p) {
 
@@ -465,11 +423,9 @@ pair<pNode, pNode> cut_in_two_halves(pNode p) {
 
 
 
-
+<br>
 ##### pNode reverse_using_stack (pNode head)
-
  스택을 이용하여 연결리스트를 역순으로 뒤집습니다.
-
 ```c++
 pNode reverse_using_stack(pNode head) {
 	if (empty(head)) return nullptr;    // nothing to reverse
@@ -499,11 +455,9 @@ pNode reverse_using_stack(pNode head) {
 
 
 
-
+<br>
 ##### pNode reverse_in_place(pNode head)
-
 추가 메모리 없이 연결리스트를 역순으로 뒤집습니다.
-
 ```c++
 pNode reverse_in_place(pNode head) {
 	if (empty(head)) return nullptr;    // nothing to reverse
@@ -526,12 +480,10 @@ pNode reverse_in_place(pNode head) {
 
 
 
-
+<br>
 ##### pNode zap_duplicates(pNode p)
-
 동일한 key를 가진 노드를 모두 제거합니다.
-
-![zap_duplicates](../../../assets/images/markdown_images/CS/datastructure/2021-06-16-linkedlist (2)/zap_duplicates.jpg)
+![zap_duplicates](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-16-linkedlist (2)/zap_duplicates.jpg)
 
 ```c++
 pNode zap_duplicates(pNode p) {
@@ -562,9 +514,8 @@ pNode zap_duplicates(pNode p) {
 
 
 
-
+<br><br>
 #### 시간복잡도
-
 | 작업                  | 시간복잡도 | 작업                 | 시간복잡도 |
 | --------------------- | ---------- | -------------------- | ---------- |
 | f - push front        | O(1)       | p - pop front        | O(1)       |
@@ -581,9 +532,8 @@ pNode zap_duplicates(pNode p) {
 
 
 
-
+<br><br>
 #### 전체코드
-
 ```bash
 compile:	 g++ driver.cpp listnode.cpp -o linkedlist
 Debug:		 g++ driver.cpp listnode.cpp -o linkedlist -DDEBUG
@@ -592,195 +542,71 @@ run: 		 ./linkedlist
 
 
 
-##### driver.cpp
-
+##### listnode.h
 ```c++
+#ifndef LISTNODE_H
+#define LISTNODE_H
+
+#ifdef DEBUG
+#define DPRINT(func) func;
+#else
+#define DPRINT(func) ;
+#endif
+
 #include <iostream>
 #include <string>
-#include <ctime>
-
-#include "nowic.h"
-#include "listnode.h"
 using namespace std;
 
-void show_timeit(int begin) { 	// display elapsed time
-	cout << "\tcpu: " << ((double)clock() - begin) / CLOCKS_PER_SEC << " sec\n";
-}
+// Node struct contains data and a pointer to the next node.
+struct Node {
+	int		data;
+	Node*	next;
+	// constructor with default arguments
+	Node(int i = 0, Node* n = nullptr) { 
+		data = i, next = n;
+	}
+	/* initializer list /////////////////////
+	Node() : data(0), next(nullptr) {};
+	Node(int i) : data(i), next(nullptr) {};
+	Node(int i, Node* n): data(i), next(n) {};
+	*////////////////////////////////////////
+	~Node() {}
+};
 
-int main() {
-	char c;
-	int val, min = 0, max = 0;
-	clock_t begin = 0;
-	Node *head = nullptr;
-	bool show_all = false;        // toggle the way of showing values 
-	string show_menu[] = { "HEAD/TAIL", "ALL" };
-	int show_n = 12;              // n items shown per line  
-	
-	do {
-		cout << "\n\tLinked List(nodes:" << size(head);
-		cout << ", min,max:" << min << "," << max; 
-		cout << ", show:" << show_menu[show_all] << "," << show_n << ")\n";
+using pNode = Node*;
 
-		cout << "\tf - push front     O(1)\t";   cout << "\tp - pop front        O(1)\n";
-		cout << "\tb - push back      O(n)\t";   cout << "\ty - pop back         O(n)\n";
-		cout << "\ti - push               \t";   cout << "\td - pop                  \n";
-		cout << "\tB - push back  N       \t";   cout << "\tY - pop back  N          \n";
-		cout << "\tF - push front N       \t";   cout << "\tP - pop front N          \n";
-		cout << "\to - push sorted*       \t";   cout << "\tt - reverse using stack  \n";
-		cout << "\tx - insertion sort*    \t";   cout << "\tr - reverse in-place     \n";
-		cout << "\th - cut in two halves* \t";   cout << "\tz - zap duplicates*      \n";
-		cout << "\tc - clear              \n";   
-		if (show_all)
-			cout << "\ts - show [HEAD/TAIL]\t";
-		else
-			cout << "\ts - show [ALL] items\t";
-		cout << "\tn - n items per line   \n";
+Node* clear(Node* p);	// free linked nodes and returns nullptr
+Node* last(Node* p);	// returns the last node
+bool empty(Node* p);	// true if empty, otherwise false
+int size(Node* p);		// returns size in the list
+void minmax(Node* p, int& min, int& max); // sets min, max of the list
 
-		c = GetChar("\tCommand[q to quit]: ");
+Node* push_front(Node* p, int x);	// pushes a new node at the front
+Node* push_back(Node* p, int x);	// pushes a new node at the back
+Node* push(Node* p, int val, int x);// pushes a new node at the position x
+Node* push_N(Node* p, int N, Node* (*push_fp)(Node *, int)); // pushes N nodes
+Node* push_sorted(Node* p, int val);// pushes a new node in sorted order ascending
+Node* insertion_sort(Node* p);      // sorts and returns a new singly linked list
 
-		// execute the command
-		switch (c) {
-		case 'f':
-		case 'b':
-		case 'i':
-			val = GetInt("\tEnter a number to push: ");
-			switch (c) {
-			case 'f':
-				head = push_front(head, val);
-				break;
-			case 'b':
-				head = push_back(head, val);
-				break;
-			case 'i':
-				int x = GetInt("\tChoose a position node: ");
-				head = push(head, val, x);
-			}
-			break;
+Node* pop_front(Node* p);			// pops the first node in the list
+Node* pop_back(Node* p);			// pops the last node in the list
+Node* pop(Node* p, int val);	    // pops the node with the val
+Node* pop_N(Node* p, int N, Node* (*pop_fp)(Node*));  // pops N nodes
 
-		case 'p':  // deletes the first node in the list
-			if (empty(head)) break;
-			head = pop_front(head);
-			break;
+pair<Node*, Node*> cut_in_two_halves(Node* p); // cut the list in two halves
+Node* keep_second_half(Node* p);	// keeps the second half
+Node* reverse_using_stack(Node* p); // reverses list using stack
+Node* reverse_in_place(Node* p);	// reverses list in-place
+Node* zap_duplicates(Node* p);      // zap duplicates 
 
-		case 'y':  // deletes the last node in the list.
-			if (empty(head)) break;
-			head = pop_back(head);
-			break;
-
-		case 'd':  // deletes the first node with val
-			if (empty(head)) break;
-			val = GetInt("\tEnter a number to delete: ");
-			head = pop(head, val);
-			break;
-
-		case 't':  // reverses the list using stack.
-			if (empty(head)) break;
-			begin = clock();
-			head = reverse_using_stack(head);
-			show_timeit(begin);
-			break;
-
-		case 'r':  // reverses the list in-place.
-			if (empty(head)) break;
-			begin = clock();
-			head = reverse_in_place(head);
-			show_timeit(begin);
-			break;
-
-		case 'o':
-			val = GetInt("\tEnter a number to push sorted: ");
-			begin = clock();
-			head = push_sorted(head, val);
-			show_timeit(begin);
-			break;
-
-		case 'x':
-			begin = clock();
-			head = insertion_sort(head);
-			show_timeit(begin);
-			break;
-
-		case 'Y': 
-			if (empty(head)) break;
-			val = GetInt("\tEnter number of nodes to pop back?: ");
-			begin = clock();
-			head = pop_N(head, val, pop_back);
-			show_timeit(begin);
-			break;
-
-		case 'P': 
-			if (empty(head)) break;
-			val = GetInt("\tEnter number of nodes to pop front?: ");
-			begin = clock();
-			head = pop_N(head, val, pop_front);
-			show_timeit(begin);
-			break;
-
-		case 'B': 
-			val = GetInt("\tEnter number of nodes to push back?: ");
-			begin = clock();
-			head = push_N(head, val, push_back); 
-			show_timeit(begin);
-			break;
-
-		case 'F': 
-			val = GetInt("\tEnter number of nodes to push front?: ");
-			begin = clock();
-
-			head = push_N(head, val, push_front);   
-			show_timeit(begin);
-			break;
-
-		case 's': // toggle the way of showing
-			show_all ? show_all = false : show_all = true;
-			break;
-
-		case 'n':
-			val = GetInt("\tEnter the max items to show per line: ");
-			if (val >= 1) show_n = val;   
-			break;
-
-		case 'c':
-			if (empty(head)) break;
-			head = clear(head);
-			break;
-
-		case 'h':
-			if (empty(head)) break;
-			if (size(head) < 2) break;
-
-			{
-				auto two_heads = cut_in_two_halves(head);
-				cout << "Showing 1st half & keeping 2nd half:\n";
-				head = two_heads.second;	// sets the second half as head
-				show(two_heads.first, show_all, show_n);
-				cout << endl;
-
-				clear(two_heads.first); // discard
-			}
-			break;
-
-		case 'z':
-			begin = clock();
-			head = zap_duplicates(head);
-			show_timeit(begin);
-			break;
-		
-		default:
-			break;
-		}
-		show(head, show_all, show_n);
-		minmax(head, min, max);
-	} while (c != 'q');
-
-	clear(head);
-	cout << "\n\t--Happy Coding!--\n";
-	return EXIT_SUCCESS;
-}
-
+// if all is true, show all nodes; otherwise, show_n * 2 nodes from front & back. 
+void show(Node* p, bool all = true, int show_n = 10);  // 10: a default magic number
+#endif
 ```
 
 
+
+<br>
 
 ##### listnode.cpp
 
@@ -789,7 +615,6 @@ int main() {
 #include <cstdlib>
 #include <stack>
 #include "listnode.h"
-#include "rand.h"
 
 #if 0
 // a basic stack functinality only provided for pedagogical purpose
@@ -942,7 +767,7 @@ pNode push_N(pNode p, int N, pNode (*push_fp)(pNode, int)) {
 	srand((unsigned)time(nullptr));
 
 	for (int i = 0; i < N; i++)
-		p = push_fp(p, rand_extended() % range);
+		p = push_fp(p, rand() % range);
 
 	DPRINT(cout << "<push_N = " << N << endl;);
 	return p;
@@ -1229,79 +1054,207 @@ void show(pNode p, bool all, int show_n) {
 
 	cout << endl;
 }
-
 ```
 
 
 
-##### listnode.h
+<br>
+
+##### driver.cpp
 
 ```c++
-//  
-// listnode.h
-// contains structures and functions for a simply-linked list of nodes.
-// 
-// 2018.12.12 Created by idebtor@gmail.com 
-// 2020.04.15 Added reverse functions and push_N()
-
-#ifndef LISTNODE_H
-#define LISTNODE_H
-
-#ifdef DEBUG
-#define DPRINT(func) func;
-#else
-#define DPRINT(func) ;
-#endif
-
 #include <iostream>
 #include <string>
+#include <ctime>
+
+#include "listnode.h"
 using namespace std;
 
-// Node struct contains data and a pointer to the next node.
-struct Node {
-	int		data;
-	Node*	next;
-	// constructor with default arguments
-	Node(int i = 0, Node* n = nullptr) { 
-		data = i, next = n;
-	}
-	/* initializer list /////////////////////
-	Node() : data(0), next(nullptr) {};
-	Node(int i) : data(i), next(nullptr) {};
-	Node(int i, Node* n): data(i), next(n) {};
-	*////////////////////////////////////////
-	~Node() {}
-};
+void show_timeit(int begin) { 	// display elapsed time
+	cout << "\tcpu: " << ((double)clock() - begin) / CLOCKS_PER_SEC << " sec\n";
+}
 
-using pNode = Node*;
+int main() {
+	char c;
+	int val, min = 0, max = 0;
+	clock_t begin = 0;
+	Node *head = nullptr;
+	bool show_all = false;        // toggle the way of showing values 
+	string show_menu[] = { "HEAD/TAIL", "ALL" };
+	int show_n = 12;              // n items shown per line  
+	
+	do {
+		cout << "\n\tLinked List(nodes:" << size(head);
+		cout << ", min,max:" << min << "," << max; 
+		cout << ", show:" << show_menu[show_all] << "," << show_n << ")\n";
 
-Node* clear(Node* p);	// free linked nodes and returns nullptr
-Node* last(Node* p);	// returns the last node
-bool empty(Node* p);	// true if empty, otherwise false
-int size(Node* p);		// returns size in the list
-void minmax(Node* p, int& min, int& max); // sets min, max of the list
+		cout << "\tf - push front     O(1)\t";   cout << "\tp - pop front        O(1)\n";
+		cout << "\tb - push back      O(n)\t";   cout << "\ty - pop back         O(n)\n";
+		cout << "\ti - push               \t";   cout << "\td - pop                  \n";
+		cout << "\tB - push back  N       \t";   cout << "\tY - pop back  N          \n";
+		cout << "\tF - push front N       \t";   cout << "\tP - pop front N          \n";
+		cout << "\to - push sorted*       \t";   cout << "\tt - reverse using stack  \n";
+		cout << "\tx - insertion sort*    \t";   cout << "\tr - reverse in-place     \n";
+		cout << "\th - cut in two halves* \t";   cout << "\tz - zap duplicates*      \n";
+		cout << "\tc - clear              \n";   
+		if (show_all)
+			cout << "\ts - show [HEAD/TAIL]\t";
+		else
+			cout << "\ts - show [ALL] items\t";
+		cout << "\tn - n items per line   \n";
 
-Node* push_front(Node* p, int x);	// pushes a new node at the front
-Node* push_back(Node* p, int x);	// pushes a new node at the back
-Node* push(Node* p, int val, int x);// pushes a new node at the position x
-Node* push_N(Node* p, int N, Node* (*push_fp)(Node *, int)); // pushes N nodes
-Node* push_sorted(Node* p, int val);// pushes a new node in sorted order ascending
-Node* insertion_sort(Node* p);      // sorts and returns a new singly linked list
+		printf("\tCommand[q to quit]: ");
+        cin >> c;
 
-Node* pop_front(Node* p);			// pops the first node in the list
-Node* pop_back(Node* p);			// pops the last node in the list
-Node* pop(Node* p, int val);	    // pops the node with the val
-Node* pop_N(Node* p, int N, Node* (*pop_fp)(Node*));  // pops N nodes
+		// execute the command
+		switch (c) {
+		case 'f':
+		case 'b':
+		case 'i':
+			printf("\tEnter a number to push: ");
+            cin >> val;
+			switch (c) {
+			case 'f':
+				head = push_front(head, val);
+				break;
+			case 'b':
+				head = push_back(head, val);
+				break;
+			case 'i':
+				int x;
+                printf("\tChoose a position node: ");
+                cin >> x;
+				head = push(head, val, x);
+			}
+			break;
 
-pair<Node*, Node*> cut_in_two_halves(Node* p); // cut the list in two halves
-Node* keep_second_half(Node* p);	// keeps the second half
-Node* reverse_using_stack(Node* p); // reverses list using stack
-Node* reverse_in_place(Node* p);	// reverses list in-place
-Node* zap_duplicates(Node* p);      // zap duplicates 
+		case 'p':  // deletes the first node in the list
+			if (empty(head)) break;
+			head = pop_front(head);
+			break;
 
-// if all is true, show all nodes; otherwise, show_n * 2 nodes from front & back. 
-void show(Node* p, bool all = true, int show_n = 10);  // 10: a default magic number
-#endif
+		case 'y':  // deletes the last node in the list.
+			if (empty(head)) break;
+			head = pop_back(head);
+			break;
+
+		case 'd':  // deletes the first node with val
+			if (empty(head)) break;
+            printf("\tEnter a number to delete: ");
+            cin >> val;
+			head = pop(head, val);
+			break;
+
+		case 't':  // reverses the list using stack.
+			if (empty(head)) break;
+			begin = clock();
+			head = reverse_using_stack(head);
+			show_timeit(begin);
+			break;
+
+		case 'r':  // reverses the list in-place.
+			if (empty(head)) break;
+			begin = clock();
+			head = reverse_in_place(head);
+			show_timeit(begin);
+			break;
+
+		case 'o':
+            printf("\tEnter a number to push sorted: ");
+			cin >> val;
+			begin = clock();
+			head = push_sorted(head, val);
+			show_timeit(begin);
+			break;
+
+		case 'x':
+			begin = clock();
+			head = insertion_sort(head);
+			show_timeit(begin);
+			break;
+
+		case 'Y': 
+			if (empty(head)) break;
+            printf("\tEnter number of nodes to pop back?: ");
+			cin >> val;
+			begin = clock();
+			head = pop_N(head, val, pop_back);
+			show_timeit(begin);
+			break;
+
+		case 'P': 
+			if (empty(head)) break;
+            printf("\tEnter number of nodes to pop front?: ");
+			cin >> val;
+			begin = clock();
+			head = pop_N(head, val, pop_front);
+			show_timeit(begin);
+			break;
+
+		case 'B': 
+			printf("\tEnter number of nodes to push back?: ");
+            cin >> val;
+			begin = clock();
+			head = push_N(head, val, push_back); 
+			show_timeit(begin);
+			break;
+
+		case 'F': 
+            printf("\tEnter number of nodes to push front?: ");
+            cin >> val;
+			begin = clock();
+
+			head = push_N(head, val, push_front);   
+			show_timeit(begin);
+			break;
+
+		case 's': // toggle the way of showing
+			show_all ? show_all = false : show_all = true;
+			break;
+
+		case 'n':
+			printf("\tEnter the max items to show per line: ");
+            cin >> val;
+			if (val >= 1) show_n = val;   
+			break;
+
+		case 'c':
+			if (empty(head)) break;
+			head = clear(head);
+			break;
+
+		case 'h':
+			if (empty(head)) break;
+			if (size(head) < 2) break;
+
+			{
+				auto two_heads = cut_in_two_halves(head);
+				cout << "Showing 1st half & keeping 2nd half:\n";
+				head = two_heads.second;	// sets the second half as head
+				show(two_heads.first, show_all, show_n);
+				cout << endl;
+
+				clear(two_heads.first); // discard
+			}
+			break;
+
+		case 'z':
+			begin = clock();
+			head = zap_duplicates(head);
+			show_timeit(begin);
+			break;
+		
+		default:
+			break;
+		}
+		show(head, show_all, show_n);
+		minmax(head, min, max);
+	} while (c != 'q');
+
+	clear(head);
+	cout << "\n\t--Happy Coding!--\n";
+	return EXIT_SUCCESS;
+}
 
 ```
 
