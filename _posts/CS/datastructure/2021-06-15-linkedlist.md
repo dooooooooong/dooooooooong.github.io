@@ -59,7 +59,8 @@ link[1] = 2;
 
 #### **추가**
 새노드 `gat`를 연결 리스트에 삽입해봅시다.
-**새 노드를 첫노드로 넣는 경우**
+
+<br>**1. 새 노드를 첫노드로 넣는 경우**
 ![addfirst](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/addfirst.jpg?raw=true)
 
 ```c++
@@ -70,7 +71,7 @@ pNode push_front(pNode p, int val) {
 ```
 
 <br>
-**새 노드를 중간노드로 넣는 경우**
+**2. 새 노드를 중간노드로 넣는 경우**
 ![addmiddle](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/addmiddle.jpg?raw=true)
 
 ```c++
@@ -93,7 +94,7 @@ pNode push_Middle (pNode p, int val, int x) {
 ```
 
 <br>
-**새 노드를 마지막 노드로 넣는경우**
+**3. 새 노드를 마지막 노드로 넣는경우**
 ![addlast](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/addlast.jpg?raw=true)
 
 ```c++
@@ -145,8 +146,10 @@ pNode push(pNode p, int val, int x) {
 <br><br>
 
 **삭제**
+
 노드 `gat`을 삭제해봅시다.
-**첫 노드를 삭제하는 경우**
+<br>
+**1. 첫 노드를 삭제하는 경우**
 
 ![rmfirst](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/rmfirst.jpg?raw=true)
 
@@ -164,7 +167,7 @@ pNode pop_front(pNode p) {
 
 <br>
 
-**중간노드를 삭제하는 경우**
+**2. 중간노드를 삭제하는 경우**
 
 ![rmmiddle](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/rmmiddle.jpg?raw=true)
 
@@ -187,7 +190,7 @@ pNode pop(pNode p, int val) {
 ```
 
 <br>
-**마지막 노드를 삭제하는 경우**
+**3. 마지막 노드를 삭제하는 경우**
 
 ![rmlast](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/rmlast.jpg?raw=true)
 
