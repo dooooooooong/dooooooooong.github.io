@@ -223,6 +223,7 @@ pNode push_N(pNode p, int N, pNode (*push_fp)(pNode, int)) {
 ##### pNode push_sorted(pNode p, int val)
 정렬된 순서로 노드를 추가합니다.
 노드가 5-6-2-4-7-10-3 이라면 새 노드 8을 추가한다면 새 노드의 위치는 7과 10의 사이가 됩니다.
+
 5-6-2-4-7-<span style="color:red">8</span>-10-3
 
 ```c++
@@ -384,7 +385,7 @@ pNode pop_N(pNode p, int N, pNode (*pop_fp)(pNode)) {
 
 
 <br><br>
-#### 고급 기능
+#### 심화 메소드
 ```c++
 pair<pNode, pNode> cut_in_two_halves(pNode p); // cut the list in two halves
 pNode reverse_using_stack(pNode p); // reverses list using stack
@@ -483,7 +484,7 @@ pNode reverse_in_place(pNode head) {
 <br>
 ##### pNode zap_duplicates(pNode p)
 동일한 key를 가진 노드를 모두 제거합니다.
-![zap_duplicates](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-16-linkedlist (2)/zap_duplicates.jpg)
+![zap_duplicates](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-16-linkedlist (2)/zap_duplicates.jpg?raw=true)
 
 ```c++
 pNode zap_duplicates(pNode p) {
@@ -516,16 +517,7 @@ pNode zap_duplicates(pNode p) {
 
 <br><br>
 #### 시간복잡도
-| 작업                  | 시간복잡도 | 작업                 | 시간복잡도 |
-| --------------------- | ---------- | -------------------- | ---------- |
-| f - push front        | O(1)       | p - pop front        | O(1)       |
-| b - push back         | O(n)       | y - pop back         | O(n)       |
-| i - push              | O(n)       | d - pop              | O(n)       |
-| B - push back N       | $O(n^2)$   | Y - pop back N       | $O(n^2)$   |
-| F - push front N      | O(n)       | P - pop front N      | O(n)       |
-| o - push sorted       | O(n)       | t - reverse in-stack | O(n)       |
-| x - insertion sort    | $O(n^2)$   | r - reverse in-place | O(n)       |
-| h - cut in two halves | O(n)       | z - zap duplicates   | O(n)       |
+![step11.png](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-16-linkedlist (2)/step11.png?raw=true)
 
 
 
