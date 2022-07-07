@@ -71,7 +71,9 @@ pNode push_front(pNode p, int val) {
 ```
 
 <br>
+
 **2. 새 노드를 중간노드로 넣는 경우**
+
 ![addmiddle](https://github.com/dooooooooong/dooooooooong.github.io/blob/master/assets/images/markdown_images/CS/datastructure/2021-06-15-linkedlist/addmiddle.jpg?raw=true)
 
 ```c++
@@ -218,6 +220,7 @@ pNode pop_back(pNode p) {
 
 <br>
 종합하면 아래와 같습니다.
+
 ```c++
 // key값이 val은 노드를 찾아 삭제하기
 
